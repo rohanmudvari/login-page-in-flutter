@@ -13,9 +13,25 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Text("Enter Email:"),
-            TextField(),
-          ],
+        TextField(
+        decoration: const InputDecoration(
+        hintText: 'Enter username',
+          border: OutlineInputBorder(),
+
+        ),
+        ),
+      TextField(
+        decoration: const InputDecoration(
+          hintText: 'Enter your password',
+          border: OutlineInputBorder(),
+
+        ),
+      ),
+            ElevatedButton(onPressed: (){
+              print("Login detected");
+            }, child: Text("Login")),
+
+        ],
         ),
       ),
     );
